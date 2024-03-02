@@ -1,8 +1,0 @@
-<launch>
-  <arg name="Name" default="default_string" />
-
-  <node pkg="lab_1" type="string_publisher.py" name="string_publisher" output="screen">
-<param name="Name" value="$(arg Name)"/>
-  </node>
-</launch>
-
