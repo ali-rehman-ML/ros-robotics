@@ -1,0 +1,12 @@
+<launch>
+
+<arg name="real_value" default="1"/>
+<arg name="imag_value" default="2"/>
+
+  <node name="complex_Number_publisher" pkg="lab_1" type="complex_number_pub.py" output="screen">
+  
+<param name="real" value="$(arg real_value)"/>
+<param name="imag" value="$(arg imag_value)"/>
+</node>
+<node name="complex_number_subscriber" pkg="lab_1" type="complex_number_sub.py" output="screen"/>
+</launch>
