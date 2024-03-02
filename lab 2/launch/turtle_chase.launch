@@ -1,0 +1,17 @@
+<launch>
+
+<arg name="linear_vel_const" default="1"/>
+<arg name="angular_vel_const" default="2"/>
+
+<node name="my_turtlesim" pkg="turtlesim" type="turtlesim_node"/>
+<node name="turtle2" pkg="turtlesim_cleaner" type="turtle_chase.py" output="screen">
+<param name="linear_vel_constant" value="$(arg linear_vel_const)"/>
+<param name="angular_vel_constant" value="$(arg angular_vel_const)"/>
+</node>
+<node name="turtlesim_teleop" pkg="turtlesim" type="turtle_teleop_key" output="screen"/>
+
+
+
+
+
+</launch>
